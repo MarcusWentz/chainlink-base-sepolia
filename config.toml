@@ -1,0 +1,20 @@
+RootDir = '~/chainlink'
+[Log]
+Level = 'warn'
+
+[WebServer]
+AllowOrigins = '\*'
+SecureCookies = false
+
+[WebServer.TLS]
+HTTPSPort = 0
+
+[[EVM]]
+ChainID = '84532'
+
+[[EVM.Nodes]]
+Name = 'Base Sepolia'
+# Note: TOML files are static. They cannot directly use .env variables unless you write custom scripts.
+# Modify WSURL and HTTPURL values to be private RPC endpoints to avoid rate limiting.
+WSURL = <WSS_ENDPOINT>
+HTTPURL = <HTTPS_ENDPOINT>
